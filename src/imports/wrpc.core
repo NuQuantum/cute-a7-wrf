@@ -1,0 +1,16 @@
+CAPI=2:
+name: ohwr:wrpc:packages
+description: WRPC VHDL packages
+
+filesets:
+  rtl:
+    files:
+      - wrpc/ip_cores/general-cores/modules/wishbone/wishbone_pkg.vhd
+      - wrpc/modules/fabric/wr_fabric_pkg.vhd
+      - wrpc/modules/wr_endpoint/ep_rx_wb_master.vhd
+    file_type: vhdlSource
+
+targets:
+  default: 
+    filesets:
+      - rtl

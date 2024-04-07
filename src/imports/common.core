@@ -1,0 +1,16 @@
+CAPI=2:
+name: ohwr:general-cores:common-imports
+description: OHWR general-cores repo imports.
+
+filesets:
+  rtl:
+    files:
+      - common/gc_sync_ffs.vhd
+      - common/gc_sync_register.vhd
+      - common/inferred_async_fifo.vhd
+    file_type: vhdlSource
+
+targets:
+  default:
+    filesets:
+      - rtl

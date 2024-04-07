@@ -1,0 +1,36 @@
+CAPI=2:
+name: sync:cute_wr_a7:top_gmii
+description: GMII Toplevel of Sync Technology's CUTE-WR-A7 board.
+
+filesets:
+  rtl:
+    depend:
+      - ohwr:wrpc:packages
+      - ohwr:general-cores:modules-imports
+      - ohwr:general-cores:wr-endpoint-imports
+      - ohwr:general-cores:common-imports
+      - sync:cute_wr_a7:xwrf_gmii
+      - sync:ipcores:cute_a7_core
+    files:
+      - cute_a7_gmii/cute_a7_gmii.vhd
+    file_type: vhdlSource
+
+  vivado_constraints:
+    files:
+      - cute_a7_gmii/cute_a7_gmii.xdc
+    file_type: xdc
+
+targets:
+  default: &default
+    filesets:
+      - rtl
+    toplevel: cute_a7_gmii
+
+  synth_50t:
+    <<: *default
+    default_tool: vivado
+    filesets_append:
+      - vivado_constraints
+    tools:
+      vivado:
+        part: xc7a50tcsg325-2

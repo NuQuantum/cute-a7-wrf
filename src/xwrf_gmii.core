@@ -1,0 +1,20 @@
+CAPI=2:
+name: sync:cute_wr_a7:xwrf_gmii
+description: GMII to Fabric bridges
+
+filesets:
+  rtl:
+    depend:
+      - ohwr:general-cores:wr-endpoint-imports
+    files:
+      - xwrf_gmii/gmii2wrfsrc.vhd
+      - xwrf_gmii/wrfsnk2gmii.vhd
+      - xwrf_gmii/xwrf_gmii.vhd
+      # This should really have been broken out into a common directory
+      - xwrf_ipbus/ip_config_wb.vhd 
+    file_type: vhdlSource
+
+targets:
+  default:
+    filesets:
+      - rtl

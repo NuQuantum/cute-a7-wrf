@@ -1,0 +1,29 @@
+CAPI=2:
+name: ohwr:general-cores:modules-imports
+description: OHWR general-cores/modules repo imports.
+
+filesets:
+  rtl:
+    files:
+      - modules/genrams/genram_pkg.vhd
+      - modules/genrams/memory_loader_pkg.vhd
+      - modules/common/gencores_pkg.vhd
+      - modules/genrams/common/generic_shiftreg_fifo.vhd
+      - modules/genrams/common/inferred_async_fifo_dual_rst.vhd
+      - modules/genrams/common/inferred_async_fifo.vhd
+      - modules/genrams/common/inferred_sync_fifo.vhd
+      - modules/genrams/generic/generic_async_fifo_dual_rst.vhd
+      - modules/genrams/generic/generic_async_fifo.vhd
+      - modules/genrams/generic/generic_sync_fifo.vhd
+      - modules/genrams/xilinx/generic_dpram_dualclock.vhd
+      - modules/genrams/xilinx/generic_dpram_sameclock.vhd
+      - modules/genrams/xilinx/generic_dpram_split.vhd
+      - modules/genrams/xilinx/generic_dpram.vhd
+      - modules/genrams/xilinx/generic_simple_dpram.vhd
+      - modules/genrams/xilinx/generic_spram.vhd
+    file_type: vhdlSource
+
+targets:
+  default:
+    filesets:
+      - rtl

@@ -1,0 +1,10 @@
+# Virtual env
+.venv
+
+# FuseSoC default build directory
+build
+
+# Vivado directories from the standard flow
+syn/cute_a7_gmii/cute_a7_gmii.cache/
+syn/cute_a7_gmii/cute_a7_gmii.hw/
+syn/cute_a7_gmii/cute_a7_gmii.runs/

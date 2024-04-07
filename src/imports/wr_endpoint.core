@@ -1,0 +1,17 @@
+CAPI=2:
+name: ohwr:general-cores:wr-endpoint-imports
+description: OHWR general-cores/wr_endpoint repo imports.
+
+filesets:
+  rtl:
+    files:
+      - wr_endpoint/ep_registers_pkg.vhd
+      - wr_endpoint/endpoint_pkg.vhd
+      - wr_endpoint/endpoint_private_pkg.vhd
+      - wr_endpoint/ep_crc32_pkg.vhd
+    file_type: vhdlSource
+
+targets:
+  default:
+    filesets:
+      - rtl

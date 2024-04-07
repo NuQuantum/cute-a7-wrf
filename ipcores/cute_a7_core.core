@@ -1,0 +1,19 @@
+CAPI=2:
+name: sync:ipcores:cute_a7_core
+description: Sync Technology's WRPC implementation - EDIF netlist!
+
+filesets:
+  netlist:
+    files:
+      - cute_a7_core/cute_a7_core.edf
+    file_type: edif
+  rtl:
+    files:
+      - cute_a7_core/cute_a7_core.vhd
+    file_type: vhdlSource
+
+targets:
+  default:
+    filesets:
+      - netlist
+      - rtl

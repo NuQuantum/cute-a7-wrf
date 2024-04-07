@@ -3,7 +3,6 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 library work;
-use work.ipbus.all;
 use work.wishbone_pkg.all;
 use work.wr_fabric_pkg.all;
 
@@ -223,7 +222,7 @@ architecture rtl of cute_a7_gmii is
     signal gmii_txdata          : std_logic_vector(7 downto 0);
     signal gmii_txen            : std_logic;
     signal gmii_tx_er           : std_logic;
-
+    
     attribute keep : string;
     attribute keep of wb_cfg_my_mac_addr  : signal is "TRUE";
     attribute keep of wb_cfg_my_ip_addr   : signal is "TRUE";
