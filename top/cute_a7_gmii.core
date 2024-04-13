@@ -20,6 +20,10 @@ filesets:
       - cute_a7_gmii/cute_a7_gmii.xdc
     file_type: xdc
 
+  vivado_hooks:
+    depend:
+      - sync:vivado:tcl_hooks
+
 targets:
   default: &default
     filesets:
@@ -31,6 +35,7 @@ targets:
     default_tool: vivado
     filesets_append:
       - vivado_constraints
+      - vivado_hooks
     tools:
       vivado:
         part: xc7a50tcsg325-2

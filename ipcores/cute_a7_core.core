@@ -5,15 +5,22 @@ description: Sync Technology's WRPC implementation - EDIF netlist!
 filesets:
   netlist:
     files:
-      - cute_a7_core/cute_a7_core.edf
-    file_type: edif
+      - cute_a7_core/cute_a7_core.edf: { file_type: edif, tags: [no_link_design] }
   rtl:
     files:
       - cute_a7_core/cute_a7_core.vhd
     file_type: vhdlSource
 
 targets:
-  default:
+  default: &default
     filesets:
       - netlist
       - rtl
+
+  synth:
+    <<: *default
+    toplevel: cute_a7_core
+    default_tool: vivado
+    tools:
+      vivado:
+        part: xc7a50tcsg325-2

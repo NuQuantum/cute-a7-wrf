@@ -1,0 +1,19 @@
+CAPI=2:
+name: sync:vivado:tcl_hooks
+description: Tcl hooks for Vivado. These are used in the project flow to enable user customisation.
+
+filesets:
+  files_tcl:
+    files:
+      - hooks/vivado_setup_hooks.tcl: {file_type: tclSource}
+      - hooks/hook_common.tcl: {file_type: user, copyto: hook_common.tcl}
+      - hooks/hook_synth_design_pre.tcl: {file_type: user, copyto: hook_synth_design_pre.tcl}
+      - hooks/hook_synth_design_post.tcl: {file_type: user, copyto: hook_synth_design_post.tcl}
+      - hooks/hook_route_design_post.tcl: {file_type: user, copyto: hook_route_design_post.tcl}
+      - hooks/hook_write_bitstream_pre.tcl: {file_type: user, copyto: hook_write_bitstream_pre.tcl}
+      - hooks/hook_write_bitstream_post.tcl: {file_type: user, copyto: hook_write_bitstream_post.tcl}
+
+targets:
+  default: &default
+    filesets:
+      - files_tcl

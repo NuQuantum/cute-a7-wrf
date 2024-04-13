@@ -1,1 +1,2 @@
-fusesoc
+fusesoc==2.3
+git+ssh://git@github.com/shareefj/edalize.git@feature/allow_edif_submodules#egg=edalize

@@ -11,4 +11,4 @@ else
 fi
 
 export PROJ_ROOT
-export FUSESOC_ROOT=$PROJ_ROOT
+export FUSESOC_CORES=$PROJ_ROOT
